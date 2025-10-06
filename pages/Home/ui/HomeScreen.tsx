@@ -5,6 +5,7 @@ import {styles} from "@/pages/Home/ui/styles";
 import {useNavigation} from "@react-navigation/native";
 import { SectionsRow } from "@/pages/Home/ui/SectionsRow";
 import {CardsList} from "@/pages/Home/ui/CardsList";
+import {Expenses} from "@/pages/Home/ui/Expenses/Expenses";
 
 export const HomeScreen = () => {
     const navigation = useNavigation();
@@ -14,6 +15,7 @@ export const HomeScreen = () => {
         <ScrollView>
         <SectionsRow />
             <CardsList />
+            <Expenses />
         </ScrollView>
     </SafeAreaView>
 }
