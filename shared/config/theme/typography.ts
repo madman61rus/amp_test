@@ -4,7 +4,9 @@ export const typography = {
     fontSize: {
         xs: 10,
         sm: 12,
+        sm2: 14,
         md: 16,
+        md2: 18,
         lg: 20,
         xl: 24,
         xxl: 32,

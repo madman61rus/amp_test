@@ -14,7 +14,7 @@ const buttons = [
     {icon: SupportIcon, title: 'Support'},
 ]
 
-export default function SectionsRow() {
+export const SectionsRow = () => {
 
 
     return (
