@@ -26,8 +26,9 @@ export const CardsList = ()=> {
             <FlatList
                 horizontal
                 data={cards}
+                keyExtractor={(item) => `${item.type}-${item.number}`}
                 ItemSeparatorComponent={() => <View style={styles.separator} />}
-                renderItem={({item}) => <Card key={`${item.type}-${item.number}`} card={item} />}
+                renderItem={({item}) => <Card card={item} />}
             />
             <AddButton onPress={() => 0} />
         </View>

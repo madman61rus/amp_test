@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 7.5,
         alignItems: 'center',
-        marginTop: 24,
     },
     title: {
         fontFamily: typography.fontFamily,

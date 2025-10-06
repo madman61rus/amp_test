@@ -1,9 +1,10 @@
-// eslint-disable-next-line import/namespace
-import { cardStyles } from "./cardStyles";
-import {ImageBackground, Text, TouchableOpacity, View} from "react-native";
-import debit from "./assets/debit.jpg";
+
 import CardSign from "@/pages/Home/ui/CardsList/CardSign";
-import {capitalize} from "@/shared/utils/strings";
+import { capitalize } from "@/shared/utils/strings";
+import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import debit from "./assets/debit.jpg";
+import virtual from "./assets/virtual.jpg";
+import { cardStyles } from "./cardStyles";
 
 export type CardType = {
     type: 'debit' | 'virtual',
@@ -16,7 +17,7 @@ export type CardType = {
 export const Card = ({card}: {card: CardType}) => {
     return (
         <TouchableOpacity onPress={card.onPress}>
-           <ImageBackground style={cardStyles.card} imageStyle={{ borderRadius: 16 }} source={debit}>
+           <ImageBackground style={cardStyles.card} imageStyle={{ borderRadius: 16 }} source={ card.type === 'debit' ? debit : virtual}>
                <CardSign />
                <View style={cardStyles.amountRow}>
                    <Text style={cardStyles.amount}>{card.currency}</Text>
