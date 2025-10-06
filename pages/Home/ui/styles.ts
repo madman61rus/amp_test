@@ -5,5 +5,6 @@ export const styles = StyleSheet.create({
     screen: {
         backgroundColor: colors.screenBackground,
         flex: 1,
+        paddingHorizontal: 16,
     }
 });
