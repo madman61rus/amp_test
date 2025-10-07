@@ -4,7 +4,7 @@ import { DeliveryScreen } from "@/pages/Notifications/ui/delivery";
 import { PaymentsScreen } from "@/pages/Notifications/ui/payments";
 import { SystemScreen } from "@/pages/Notifications/ui/system";
 import { TravelScreen } from "@/pages/Notifications/ui/travel";
-import {colors, typography} from "@/shared/config/theme";
+import { colors, typography } from "@/shared/config/theme";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 const TabStack = createMaterialTopTabNavigator();
