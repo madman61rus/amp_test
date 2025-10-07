@@ -4,6 +4,7 @@ import {colors, typography} from "@/shared/config/theme";
 export const styles = StyleSheet.create({
     topBar: {
         backgroundColor: colors.screenBackground,
+        paddingHorizontal: 16,
     },
     container: {
         flexDirection: 'row',
