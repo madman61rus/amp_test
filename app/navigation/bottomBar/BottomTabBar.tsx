@@ -1,8 +1,8 @@
+import { colors } from "@/shared/config/theme";
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTabItems } from './model/useTabItems';
-import {colors} from "@/shared/config/theme";
 
 export const BottomTabBar = ({ state, navigation }: BottomTabBarProps) => {
     const insets = useSafeAreaInsets();
@@ -15,8 +15,12 @@ export const BottomTabBar = ({ state, navigation }: BottomTabBarProps) => {
                 justifyContent: 'space-around',
                 paddingBottom: insets.bottom,
                 backgroundColor: colors.screenBackground,
-                borderTopWidth: 1,
-                borderTopColor: '#eee',
+                // remove top separator and any shadow
+                borderTopWidth: 0,
+                shadowOpacity: 0,
+                shadowRadius: 0,
+                shadowOffset: { width: 0, height: 0 },
+                elevation: 0,
             }}
         >
             {tabs.map(({ name, Icon }) => {

@@ -19,7 +19,7 @@ export const NotificationsStack = () => {
                 tabBarInactiveTintColor: colors.fontPrimary,
                 tabBarLabelStyle: {
                     fontFamily: 'Inter',
-                    fontSize: typography.fontSize.sm2,
+                    fontSize: typography.fontSize.xs,
                     fontWeight: typography.fontWeight.regular,
                 },
                 tabBarIndicatorStyle: {

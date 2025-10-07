@@ -5,6 +5,7 @@ export const typography = {
         xs: 10,
         sm: 12,
         sm2: 14,
+        sm3: 13,
         md: 16,
         md2: 18,
         lg: 20,

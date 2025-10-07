@@ -1,18 +1,20 @@
-import {Text, TouchableOpacity, View} from "react-native";
-import {SafeAreaView} from "react-native-safe-area-context";
-import {styles} from "@/app/navigation/homeHeader/styles";
 import HeaderAvatar from "@/app/navigation/homeHeader/HeaderAvatar";
 import Qr from "@/app/navigation/homeHeader/Qr";
-import {useNavigation} from "@react-navigation/native";
+import { styles } from "@/app/navigation/homeHeader/styles";
+import type { NavigationProp } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
+import { Text, TouchableOpacity, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export const HomeHeader = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<NavigationProp<any>>();
+    const insets = useSafeAreaInsets();
 
     const goToNotifications = () => {
         navigation.navigate("HomeStack", {screen: "NotificationsStack"});
     }
     return (
-        <SafeAreaView edges={['top']} style={styles.topBar}>
+        <View style={[styles.topBar, { paddingTop: insets.top }]}>
             <View style={styles.container}>
                 <TouchableOpacity hitSlop={10} style={styles.leftContainer} onPress={goToNotifications}>
                     <View style={styles.avatar}><HeaderAvatar/></View>
@@ -20,5 +22,5 @@ export const HomeHeader = () => {
                 </TouchableOpacity>
                 <TouchableOpacity hitSlop={10} style={styles.qr}><Qr/></TouchableOpacity>
             </View>
-        </SafeAreaView>);
+        </View>);
 }
